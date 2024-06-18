@@ -18,14 +18,14 @@ jobs:
       matrix:
         node-version: [18.x]
     steps:
+    - run: sudo rm -rf node_modules/
+    - run: sudo rm -rf .expo/
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: sudo rm -rf node_modules/
-    - run: sudo rm -rf .expo/
     - run: npm install
     - run: npm install --only=dev
     - run: sudo pm2 restart kodkarta
