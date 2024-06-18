@@ -25,5 +25,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm i
-    - run: npx expo install react-native-web react-dom @expo/metro-runtime
     - run: sudo pm2 restart kodkarta
