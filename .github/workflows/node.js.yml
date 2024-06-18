@@ -28,4 +28,4 @@ jobs:
     - run: sudo rm -rf .expo/
     - run: npm install
     - run: npm install --only=dev
-    - run: sudo fuser -k 80/tcp && sudo pm2 restart kodkarta
+    - run: sudo pm2 restart kodkarta
